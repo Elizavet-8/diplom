@@ -1,0 +1,58 @@
+:local {
+  $parking-container-border-color: white;
+  $circle-red-color: rgb(235, 106, 76);
+  $circle-green-color: rgb(15, 221, 91);
+  $circle-grey-color: rgb(210, 210, 210);
+  $parking-spot-hover-color: rgb(25, 34, 41);
+  $caption-color: rgb(173, 179, 188);
+  
+  .container {
+    border-right: 4px solid $parking-container-border-color;
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      cursor: pointer;
+      background: lighten($parking-spot-hover-color, 5%);
+    }
+  }
+  
+  .inner-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  
+  .caption {
+    color: $caption-color;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px 0 30px;
+  }
+  
+  .circle,
+  %circle {
+    transition: height 1s ease 0.5s, width 1s ease 0.5s;
+    height: 2em;
+    width: 2em;
+    border-radius: 1em;
+  }
+  
+  .circle-red {
+    @extend %circle;
+    background: $circle-red-color;
+  }
+  
+  .circle-green {
+    @extend %circle;
+    background: $circle-green-color;
+  }
+
+  .circle-grey {
+    @extend %circle;
+    background: $circle-grey-color;
+  }
+}

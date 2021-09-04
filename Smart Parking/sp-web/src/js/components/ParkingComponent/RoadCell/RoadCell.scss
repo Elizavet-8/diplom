@@ -1,0 +1,8 @@
+:local {
+  $container-border-color: white;
+  
+  .container {
+    border-right: 4px dashed $container-border-color;
+    flex: 1;
+  }
+}

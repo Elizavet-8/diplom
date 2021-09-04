@@ -1,0 +1,69 @@
+:local {
+  $horiz-road-border-color: white;
+  $parking-container-border-color: rgb(237, 237, 237);
+  $parking-container-background-color: rgb(25, 34, 41);
+  $overlay-background-color: rgb(46, 46, 46);
+
+  .parking {
+    border: 4px solid $parking-container-border-color;
+    //flex: 1 1 auto;
+    height: 90vw;
+    width: 90vw;
+    max-width: 90vh;
+    max-height: 90%;
+    //margin: 0 50px;
+    //margin-left: 50px;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: $parking-container-background-color;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .message-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8%;
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-background-color;
+    opacity: 0.5;
+    z-index: 1000;
+  }
+
+  .parking-row {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+  }
+
+  .horiz-road,
+  %horiz-road {
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: center;
+    width: 75%;
+    height: 25%;
+
+    &-first {
+      @extend %horiz-road;
+      border-bottom: 4px dashed $horiz-road-border-color;
+    }
+  }
+}

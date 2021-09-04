@@ -1,0 +1,22 @@
+{
+  "name": "sp-api",
+  "version": "0.0.1",
+  "description": "Smart Parking web app server",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "server": "node index.js",
+    "bootstrap": "node utils/bootstrap.js",
+    "reset_db": "node utils/reset_db.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "3.4.7",
+    "bcryptjs": "2.3.0",
+    "body-parser": "1.15.2",
+    "cookie-parser": "1.4.3",
+    "express": "4.13.3",
+    "mongodb": "2.0.49"
+  }
+}
